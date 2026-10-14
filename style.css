@@ -258,6 +258,79 @@ button .fas {
   color: #003c71;
 }
 
+/* Winner celebration popup */
+#celebrationDialog {
+  position: fixed;
+  width: min(90%, 440px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: white;
+  color: #003c71;
+  text-align: center;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+}
+
+#celebrationDialog::backdrop {
+  background: rgba(0, 30, 60, 0.65);
+}
+
+.celebration-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 28px 30px;
+}
+
+.celebration-content h2 {
+  margin-bottom: 12px;
+  color: #0071c5;
+}
+
+.celebration-content p {
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.celebration-content button {
+  margin: 0 auto;
+}
+
+#confettiContainer {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 16px;
+  animation: confetti-fall 3s ease-in forwards;
+}
+
+.confetti-piece:nth-child(3n) {
+  background-color: #00c7fd;
+}
+
+.confetti-piece:nth-child(3n + 1) {
+  background-color: #ffd43b;
+}
+
+.confetti-piece:nth-child(3n + 2) {
+  background-color: #54c878;
+}
+
+@keyframes confetti-fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
 /* Counter */
 #attendeeCount {
   color: #0071c5;
@@ -346,6 +419,45 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+/* Checked-in attendee list */
+.attendee-list-section {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  text-align: left;
+}
+
+.attendee-list-section h4 {
+  margin-bottom: 12px;
+  color: #475569;
+  font-size: 15px;
+}
+
+.attendee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.attendee-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: white;
+  color: #334155;
+}
+
+.attendee-team {
+  color: #64748b;
+  text-align: right;
 }
 
 /* Mobile responsive */

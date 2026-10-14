@@ -13,7 +13,7 @@ Create a counter that goes up by 1 every time someone submits the form.
 ## Calculate the percentage of a goal completed
 
 Use the current count and a max goal to calculate a progress percentage.
-
+  
 ## Combine a name and team into a welcome message
 
 Use someone's name and selected team to create a personalized greeting.
