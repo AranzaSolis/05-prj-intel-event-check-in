@@ -14,7 +14,7 @@ const closeCelebration = document.getElementById("closeCelebration");
 
 //track attendance
 let count = 0;
-const maxCount = 1; // 50
+const maxCount = 50; // 50
 let attendees = [];
 
 //Display saved attendees by creating text-only list entries.
@@ -67,9 +67,6 @@ function playCelebrationSound() {
     audioContext.close();
   }, 1000);
 }
-
-// TEMPORARY TEST RESET: Remove this line after the page has reset once.
-localStorage.removeItem("eventCheckInCounts");
 
 //Restore saved attendance counts and refresh the page totals.
 try {
