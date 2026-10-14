@@ -14,7 +14,7 @@ const closeCelebration = document.getElementById("closeCelebration");
 
 //track attendance
 let count = 0;
-const maxCount = 50; // 50
+const maxCount = 10; 
 let attendees = [];
 
 //Display saved attendees by creating text-only list entries.
